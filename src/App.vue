@@ -1,11 +1,10 @@
 <script setup lang="ts">
 import { RouterView } from 'vue-router'
-import MainNav from './components/MainNav.vue'
+import MainHeader from './components/MainHeader.vue'
+import './styles/global.scss'
 </script>
 
 <template>
-  <MainNav />
+  <MainHeader />
   <RouterView />
 </template>
-
-<style scoped></style>
