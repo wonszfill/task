@@ -20,7 +20,7 @@ defineProps<Props>()
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #3e3e3e;
+  background-color: $dark-gray;
   opacity: 0.6;
   z-index: 20;
 }
