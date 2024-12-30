@@ -25,6 +25,13 @@ a {
   text-decoration: none;
 }
 
+button {
+  cursor: pointer;
+  border: none;
+  border-radius: unset;
+  background-color: transparent;
+}
+
 h1,
 h2,
 h3,

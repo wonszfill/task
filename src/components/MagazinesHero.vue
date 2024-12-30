@@ -85,7 +85,7 @@
   &__description {
     max-width: 35.125rem;
     font-size: 0.875rem;
-    color: $text-light;
+    color: $light-gray;
     font-weight: 300;
     line-height: 1.5rem;
 

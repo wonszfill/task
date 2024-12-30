@@ -5,7 +5,6 @@ import './styles/global.scss'
 
 import { useBasketStore } from '@/stores/basket'
 import Backdrop from './components/Ui/Backdrop.vue'
-import BasketPopup from './components/BasketPopup.vue'
 
 const { getIsBasketPopupVisible } = useBasketStore()
 </script>
@@ -13,7 +12,5 @@ const { getIsBasketPopupVisible } = useBasketStore()
 <template>
   <MainHeader />
   <RouterView />
-  <Backdrop :is-visibile="getIsBasketPopupVisible()">
-    <BasketPopup />
-  </Backdrop>
+  <Backdrop :is-visibile="getIsBasketPopupVisible()" />
 </template>

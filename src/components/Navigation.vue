@@ -3,8 +3,9 @@ import UiIconButton from './Ui/IconButton.vue'
 import { MAIN_MENU_LIST } from '../consts'
 
 import { useBasketStore } from '@/stores/basket'
+import BasketPopup from './BasketPopup.vue'
 
-const { toggleBasketPopup, getBasketQuantity } = useBasketStore()
+const { toggleBasketPopup, getBasketQuantity, getIsBasketPopupVisible } = useBasketStore()
 </script>
 
 <template>
@@ -44,26 +45,30 @@ const { toggleBasketPopup, getBasketQuantity } = useBasketStore()
           />
         </svg>
       </UiIconButton>
-      <UiIconButton @click="toggleBasketPopup" :bubble-content="getBasketQuantity()">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="20.116"
-          height="20.089"
-          viewBox="0 0 20.116 20.089"
-        >
-          <g transform="translate(-1232 -66)">
-            <g transform="translate(1225.56 59.6)">
-              <g transform="translate(6.44 6.4)">
-                <path
-                  fill="currentColor"
-                  d="M24.2,11.66a.691.691,0,0,0-.692-.588h-3.98V9.445a3.045,3.045,0,1,0-6.091,0v1.626H9.461a.691.691,0,0,0-.692.588L6.45,25.675a.68.68,0,0,0,.156.571.71.71,0,0,0,.536.242h18.7a.7.7,0,0,0,.709-.709.877.877,0,0,0-.035-.225L24.2,11.66ZM14.86,9.445a1.626,1.626,0,1,1,3.253,0v1.626H14.86V9.445ZM7.973,25.087l2.094-12.6h3.374v3.962a.709.709,0,0,0,1.419,0V12.491h3.253v3.962a.709.709,0,0,0,1.419,0V12.491h3.374L25,25.087H7.973Z"
-                  transform="translate(-6.44 -6.4)"
-                />
+      <div class="navigation__basket-wrapper">
+        <UiIconButton @click="toggleBasketPopup" :bubble-content="getBasketQuantity()">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="20.116"
+            height="20.089"
+            viewBox="0 0 20.116 20.089"
+          >
+            <g transform="translate(-1232 -66)">
+              <g transform="translate(1225.56 59.6)">
+                <g transform="translate(6.44 6.4)">
+                  <path
+                    fill="currentColor"
+                    d="M24.2,11.66a.691.691,0,0,0-.692-.588h-3.98V9.445a3.045,3.045,0,1,0-6.091,0v1.626H9.461a.691.691,0,0,0-.692.588L6.45,25.675a.68.68,0,0,0,.156.571.71.71,0,0,0,.536.242h18.7a.7.7,0,0,0,.709-.709.877.877,0,0,0-.035-.225L24.2,11.66ZM14.86,9.445a1.626,1.626,0,1,1,3.253,0v1.626H14.86V9.445ZM7.973,25.087l2.094-12.6h3.374v3.962a.709.709,0,0,0,1.419,0V12.491h3.253v3.962a.709.709,0,0,0,1.419,0V12.491h3.374L25,25.087H7.973Z"
+                    transform="translate(-6.44 -6.4)"
+                  />
+                </g>
               </g>
             </g>
-          </g>
-        </svg>
-      </UiIconButton>
+          </svg>
+        </UiIconButton>
+
+        <BasketPopup v-if="getIsBasketPopupVisible()" />
+      </div>
     </div>
   </nav>
 </template>
@@ -93,6 +98,10 @@ const { toggleBasketPopup, getBasketQuantity } = useBasketStore()
   &__actions {
     display: flex;
     gap: 1.875rem;
+  }
+
+  &__basket-wrapper {
+    position: relative;
   }
 }
 </style>

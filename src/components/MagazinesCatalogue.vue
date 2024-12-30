@@ -4,13 +4,27 @@ import MagazineCard from './Ui/MagazineCard.vue'
 import Pagination from './Ui/Pagination.vue'
 
 const { pagination, products } = useMagazines()
+import { useBasketStore } from '@/stores/basket'
+
+const { addToBasket } = useBasketStore()
+
+import { useSettingsStore } from '@/stores/settings'
+
+const { getLocale, getCurrency } = useSettingsStore()
 </script>
 
 <template>
   <section class="magazines-catalogue container">
     <h2>Wyszukaj czasopismo</h2>
     <div class="magazines-catalogue__products">
-      <MagazineCard v-for="item in products" :key="item.uid" :item="item" />
+      <MagazineCard
+        @click="addToBasket(item)"
+        v-for="item in products"
+        :key="item.uid"
+        :item="item"
+        :locale="getLocale()"
+        :currency="getCurrency()"
+      />
     </div>
     <Pagination :pagination="pagination" />
   </section>

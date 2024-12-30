@@ -3,16 +3,17 @@ import type { Magazine } from '@/types'
 
 interface Props {
   item: Magazine
+  locale: string
+  currency: string
 }
 
 defineProps<Props>()
 
-const CURRENCY = 'PLN'
-const LOCALE_SYMBOL = 'pl-PL'
+defineEmits(['click'])
 </script>
 
 <template>
-  <div class="magazine-card">
+  <a @click="$emit('click')" class="magazine-card">
     <div class="magazine-card__wrapper">
       <img
         :src="item.coverUrl"
@@ -25,19 +26,20 @@ const LOCALE_SYMBOL = 'pl-PL'
       <div class="magazine-card__box">
         <h5 class="magazine-card__label">{{ item.label }}</h5>
         <div class="magazine-card__price">
-          {{ item.price.toLocaleString(LOCALE_SYMBOL) }}
-          <span class="magazine-card__currency">{{ CURRENCY }}</span>
+          {{ item.price.toLocaleString(locale) }}
+          <span class="magazine-card__currency">{{ currency }}</span>
         </div>
         <div class="magazine-card__vat">+ VAT {{ item.vat }}%</div>
         <div class="magazine-card__details">Szczegóły</div>
       </div>
     </div>
-  </div>
+  </a>
 </template>
 
 <style lang="scss">
 .magazine-card {
   cursor: pointer;
+
   &__wrapper {
     max-width: 17.875rem;
     margin: 0 auto;

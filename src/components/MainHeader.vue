@@ -15,7 +15,7 @@ import Navigation from './Navigation.vue'
 <style lang="scss">
 .main-header {
   background-color: #fff;
-  border-bottom: 1px solid $light-border;
+  border-bottom: 1px solid $light-gray;
   width: 100%;
 
   /* to display over backdrop */

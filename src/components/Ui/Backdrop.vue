@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import { watch } from 'vue'
-
 interface Props {
   isVisibile: boolean
 }
@@ -12,9 +10,6 @@ defineProps<Props>()
   <Transition name="fade">
     <section v-if="isVisibile" class="backdrop"></section>
   </Transition>
-  <div v-bind="$attrs" class="container">
-    <slot />
-  </div>
 </template>
 
 <style lang="scss">

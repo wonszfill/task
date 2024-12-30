@@ -1,6 +1,6 @@
 import type { BasketProduct } from '@/types'
 import { defineStore } from 'pinia'
-import { computed, ref, type Ref } from 'vue'
+import { computed, onMounted, ref, type Ref } from 'vue'
 
 export const useBasketStore = defineStore('basket', () => {
   const isBasketPopupVisible = ref(false)
@@ -16,6 +16,21 @@ export const useBasketStore = defineStore('basket', () => {
     }
     localStorage.setItem('magazines', JSON.stringify(basket.value))
   }
+
+  function getFromLocalStorage() {
+    if (!localStorage) {
+      return
+    }
+    const localData = localStorage.getItem('magazines')
+
+    if (localData) {
+      basket.value = JSON.parse(localData)
+    }
+  }
+
+  onMounted(() => {
+    getFromLocalStorage()
+  })
 
   function addToBasket(item: BasketProduct) {
     if (item.uid in basket.value) {
@@ -34,7 +49,6 @@ export const useBasketStore = defineStore('basket', () => {
         console.warn(e)
       }
     }
-    basket.value[item.uid] = item
 
     syncWithLocalStorage()
   }
