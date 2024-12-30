@@ -24,7 +24,7 @@ defineEmits(['click'])
       />
 
       <div class="magazine-card__box">
-        <h5 class="magazine-card__label">{{ item.label }}</h5>
+        <h3 class="magazine-card__label">{{ item.label }}</h3>
         <div class="magazine-card__price">
           {{ item.price.toLocaleString(locale) }}
           <span class="magazine-card__currency">{{ currency }}</span>

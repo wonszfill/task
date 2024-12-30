@@ -6,7 +6,7 @@ import Navigation from './Navigation.vue'
 <template>
   <header class="main-header">
     <div class="main-header__wrapper container">
-      <RouterLink to="/"><Logo class="main-header__logo" /></RouterLink>
+      <RouterLink aria-label="Strona główna" to="/"><Logo class="main-header__logo" /></RouterLink>
       <Navigation />
     </div>
   </header>

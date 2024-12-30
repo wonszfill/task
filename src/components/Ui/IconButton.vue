@@ -1,14 +1,16 @@
 <script setup lang="ts">
 interface Props {
   bubbleContent?: string | number
+  name?: string
 }
 withDefaults(defineProps<Props>(), {
   bubbleContent: '',
+  name: '',
 })
 </script>
 
 <template>
-  <button class="icon-button">
+  <button :title="name" :aria-label="name" class="icon-button">
     <slot />
     <span class="icon-button__bubble" v-if="bubbleContent || bubbleContent === 0">{{
       bubbleContent

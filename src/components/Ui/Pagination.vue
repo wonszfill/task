@@ -12,7 +12,7 @@ defineProps<Props>()
 <template>
   <ul class="pagination">
     <li v-if="pagination.prev">
-      <PaginationButton :page="pagination.prev">
+      <PaginationButton aria-label="Poprzednia strona" :page="pagination.prev">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="5.004"
@@ -35,7 +35,7 @@ defineProps<Props>()
       <PaginationButton :page="page" />
     </li>
     <li v-if="pagination.next">
-      <PaginationButton :page="pagination.next">
+      <PaginationButton aria-label="Następna strona" :page="pagination.next">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="5.004"

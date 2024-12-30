@@ -17,7 +17,7 @@ const { toggleBasketPopup, getBasketQuantity, getIsBasketPopupVisible } = useBas
     </ul>
 
     <div class="navigation__actions">
-      <UiIconButton>
+      <UiIconButton name="Szukaj">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="18.743"
@@ -32,7 +32,7 @@ const { toggleBasketPopup, getBasketQuantity, getIsBasketPopupVisible } = useBas
           </g>
         </svg>
       </UiIconButton>
-      <UiIconButton>
+      <UiIconButton name="Profil">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="18.33"
@@ -46,7 +46,11 @@ const { toggleBasketPopup, getBasketQuantity, getIsBasketPopupVisible } = useBas
         </svg>
       </UiIconButton>
       <div class="navigation__basket-wrapper">
-        <UiIconButton @click="toggleBasketPopup" :bubble-content="getBasketQuantity()">
+        <UiIconButton
+          name="Koszyk"
+          @click="toggleBasketPopup"
+          :bubble-content="getBasketQuantity()"
+        >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="20.116"
