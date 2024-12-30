@@ -30,7 +30,7 @@ const { getLocale, getCurrency } = useSettingsStore()
   </section>
 </template>
 
-<style setup lang="scss">
+<style lang="scss">
 .magazines-catalogue {
   padding-bottom: 4.6288rem;
 
