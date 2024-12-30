@@ -1,6 +1,10 @@
 <script setup lang="ts">
 import UiIconButton from './Ui/IconButton.vue'
 import { MAIN_MENU_LIST } from '../consts'
+
+import { useBasketStore } from '@/stores/basket'
+
+const { toggleBasketPopup, getBasketQuantity } = useBasketStore()
 </script>
 
 <template>
@@ -40,7 +44,7 @@ import { MAIN_MENU_LIST } from '../consts'
           />
         </svg>
       </UiIconButton>
-      <UiIconButton bubbleContent="2">
+      <UiIconButton @click="toggleBasketPopup" :bubble-content="getBasketQuantity()">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="20.116"

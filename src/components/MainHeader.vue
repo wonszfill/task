@@ -15,11 +15,16 @@ import Navigation from './Navigation.vue'
 <style lang="scss">
 .main-header {
   background-color: #fff;
-  height: 5.5625rem;
+  height: $main-header-height-desktop;
   display: flex;
   align-items: center;
   justify-content: space-between;
   border-bottom: 1px solid $light-border;
+  width: 100%;
+
+  /* to display over backdrop */
+  position: relative;
+  z-index: 21;
 
   &__logo {
     flex-shrink: 0;

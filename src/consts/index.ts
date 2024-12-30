@@ -4,36 +4,36 @@ export const MAIN_MENU_LIST: MenuLink[] = [
   {
     label: 'O Kazusie',
     uid: 'o-kazusie',
-    url: 'o-kazusie',
+    url: '/',
   },
   {
     label: 'O Firmie',
     uid: 'o-firmie',
-    url: 'o-firmie',
+    url: '/',
   },
   {
     label: 'Czasopisma',
     uid: 'czasopisma',
-    url: 'czasopisma',
+    url: '/',
   },
   {
     label: 'Szkolenia',
     uid: 'szkolenia',
-    url: 'szkolenia',
+    url: '/',
   },
   {
     label: 'Baza Wiedzy',
     uid: 'baza-wiedzy',
-    url: 'baza-wiedzy',
+    url: '/',
   },
   {
     label: 'Kazus TV',
     uid: 'kazus-tv',
-    url: 'kazus-tv',
+    url: '/',
   },
   {
     label: 'Kontakt',
     uid: 'kontakt',
-    url: 'kontakt',
+    url: '/',
   },
 ]

@@ -1,0 +1,131 @@
+{
+  "pagination": {
+    "pages": [
+      {
+        "index": 1,
+        "isActive": false,
+        "url": "/"
+      },
+      {
+        "index": 2,
+        "isActive": false,
+        "url": "/"
+      },
+      {
+        "index": 3,
+        "isActive": true,
+        "url": "/"
+      },
+      {
+        "index": 4,
+        "isActive": false,
+        "url": "/"
+      },
+      {
+        "index": 5,
+        "isActive": false,
+        "url": "/"
+      }
+    ],
+    "prev": {
+      "index": 1,
+      "isActive": false,
+      "url": "/"
+    },
+    "next": {
+      "index": 5,
+      "isActive": false,
+      "url": "/"
+    }
+  },
+  "products": [
+    {
+      "label": "Kazus Podatkowy 1(6)2019",
+      "price": 98.76,
+      "vat": 23,
+      "uid": "product-1",
+      "coverUrl": "/magazines1.png",
+      "coverDimensions": {
+        "width": 163,
+        "height": 190
+      }
+    },
+    {
+      "label": "Kazus Podatkowy 1(6)2019",
+      "price": 98.76,
+      "vat": 23,
+      "uid": "product-2",
+      "coverUrl": "/magazines1.png",
+      "coverDimensions": {
+        "width": 163,
+        "height": 190
+      }
+    },
+    {
+      "label": "Procedury administracyjne i podatkowe 2",
+      "price": 98.76,
+      "vat": 23,
+      "uid": "product-3",
+      "coverUrl": "/magazines2.png",
+      "coverDimensions": {
+        "width": 163,
+        "height": 190
+      }
+    },
+    {
+      "label": "Prawo Pomocy Publicznej",
+      "price": 98.76,
+      "vat": 23,
+      "uid": "product-4",
+      "coverUrl": "/magazines3.png",
+      "coverDimensions": {
+        "width": 163,
+        "height": 190
+      }
+    },
+    {
+      "label": "Kazus Podatkowy 1(6)2019",
+      "price": 98.76,
+      "vat": 23,
+      "uid": "product-5",
+      "coverUrl": "/magazines1.png",
+      "coverDimensions": {
+        "width": 163,
+        "height": 190
+      }
+    },
+    {
+      "label": "Kazus Podatkowy 1(6)2019",
+      "price": 98.76,
+      "vat": 23,
+      "uid": "product-6",
+      "coverUrl": "/magazines1.png",
+      "coverDimensions": {
+        "width": 163,
+        "height": 190
+      }
+    },
+    {
+      "label": "Procedury administracyjne i podatkowe 2",
+      "price": 98.76,
+      "vat": 23,
+      "uid": "product-7",
+      "coverUrl": "/magazines2.png",
+      "coverDimensions": {
+        "width": 163,
+        "height": 190
+      }
+    },
+    {
+      "label": "Prawo Pomocy Publicznej",
+      "price": 98.76,
+      "vat": 23,
+      "uid": "product-8",
+      "coverUrl": "/magazines3.png",
+      "coverDimensions": {
+        "width": 163,
+        "height": 190
+      }
+    }
+  ]
+}
