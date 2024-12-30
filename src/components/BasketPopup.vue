@@ -55,7 +55,7 @@ const { getCurrency } = useSettingsStore()
           </div>
         </div>
 
-        <a class="basket-popup__total-button">Przejdź do koszyka </a>
+        <RouterLink to="/" class="basket-popup__total-button">Przejdź do koszyka </RouterLink>
       </div>
     </template>
 
@@ -69,7 +69,7 @@ const { getCurrency } = useSettingsStore()
 
   position: absolute;
   background-color: #fff;
-  top: calc(100% + 2.075rem);
+  top: calc(100% + 2.125rem);
   right: 0;
   width: 23.8125rem;
 
@@ -103,6 +103,9 @@ const { getCurrency } = useSettingsStore()
 
   &__list {
     padding: 1rem $basket-popup-side-padding 1.25rem;
+    max-height: 50vh;
+    scrollbar-width: thin;
+    overflow-y: auto;
 
     & > div:not(:first-child) {
       margin-top: 0.6875rem;

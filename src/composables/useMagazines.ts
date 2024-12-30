@@ -29,7 +29,7 @@ export function useMagazines() {
 
   onBeforeUnmount(() => {
     if (fetchController.value) {
-      fetchController.value.abort()
+      fetchController.value.abort('Unmounting component.')
     }
   })
 
