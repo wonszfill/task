@@ -2,7 +2,8 @@
 import { useBasketStore } from '@/stores/basket'
 import BasketItem from './Ui/BasketItem.vue'
 
-const { getBasket, getBasketQuantity, removeFromBasket, toggleBasketPopup } = useBasketStore()
+const { getBasket, getBasketTotal, getBasketQuantity, removeFromBasket, toggleBasketPopup } =
+  useBasketStore()
 
 import { useSettingsStore } from '@/stores/settings'
 
@@ -41,7 +42,21 @@ const { getCurrency } = useSettingsStore()
         />
       </div>
 
-      <div class="basket-popup__summary">{{}}</div>
+      <div class="basket-popup__summary">
+        <div class="basket-popup__total">
+          <span class="basket-popup__total-label">Łączna kwota:</span>
+          <div class="basket-popup__total-price">
+            <div>
+              <span class="basket-popup__total-whole">{{ getBasketTotal().whole }}</span
+              ><span class="basket-popup__total-fraction">{{ getBasketTotal().fraction }}</span
+              ><span class="basket-popup__total-currency">{{ getCurrency() }}</span>
+            </div>
+            <span class="basket-popup__total-vat">+ VAT 23%</span>
+          </div>
+        </div>
+
+        <a class="basket-popup__total-button">Przejdź do koszyka </a>
+      </div>
     </template>
 
     <div class="basket-popup__empty" v-else>Koszyk jest pusty.</div>
@@ -96,6 +111,74 @@ const { getCurrency } = useSettingsStore()
 
   &__empty {
     padding: 1rem $basket-popup-side-padding;
+  }
+
+  &__summary {
+    border-top: 1px solid $sirocco;
+    padding: 1.5625rem 1.6875rem 34px 1.5625rem;
+    color: $text-color;
+  }
+
+  &__total {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__total-label {
+    font-weight: bold;
+    font-size: 1rem;
+    line-height: 1.875rem;
+  }
+
+  &__total-price {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.25rem;
+  }
+
+  &__total-whole {
+    font-size: 1.375rem;
+    line-height: 1.5rem;
+    font-weight: 900;
+  }
+
+  &__total-fraction,
+  &__total-currency {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    font-weight: 900;
+  }
+
+  &__total-vat {
+    font-weight: 300;
+  }
+
+  &__total-fraction::after {
+    content: ' ';
+  }
+
+  &__total-fraction::before {
+    content: ',';
+  }
+
+  &__total-button {
+    background-color: $secondary;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 0.15rem;
+    font-weight: medium;
+    margin-top: 1rem;
+    margin-left: 0.4375rem;
+
+    &:hover {
+      opacity: 0.9;
+    }
   }
 }
 </style>

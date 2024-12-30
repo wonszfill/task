@@ -19,7 +19,6 @@ withDefaults(defineProps<Props>(), {
 <style lang="scss">
 .icon-button {
   border: none;
-  cursor: pointer;
   color: $primary;
   position: relative;
   transition: color 100ms ease-in-out;

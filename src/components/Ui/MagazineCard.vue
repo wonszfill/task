@@ -38,8 +38,6 @@ defineEmits(['click'])
 
 <style lang="scss">
 .magazine-card {
-  cursor: pointer;
-
   &__wrapper {
     max-width: 17.875rem;
     margin: 0 auto;

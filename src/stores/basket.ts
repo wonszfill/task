@@ -1,3 +1,4 @@
+import { splitNumberByComma } from '@/helpers'
 import type { BasketProduct } from '@/types'
 import { defineStore } from 'pinia'
 import { computed, onMounted, ref, type Ref } from 'vue'
@@ -8,7 +9,6 @@ export const useBasketStore = defineStore('basket', () => {
   const toggleBasketPopup = () => (isBasketPopupVisible.value = !isBasketPopupVisible.value)
 
   const basket: Ref<{ [key: string]: BasketProduct }> = ref({})
-  const basketQuantity = computed(() => Object.keys(basket.value).length)
 
   function syncWithLocalStorage() {
     if (!localStorage) {
@@ -54,8 +54,15 @@ export const useBasketStore = defineStore('basket', () => {
   }
 
   const getBasket = () => basket.value
-  const getBasketQuantity = () => basketQuantity.value
+  const getBasketQuantity = () => Object.keys(basket.value).length
   const getIsBasketPopupVisible = () => isBasketPopupVisible.value
+  const getBasketTotal = () =>
+    splitNumberByComma(
+      Object.values(basket.value).reduce(
+        (accumulator, currentValue) => accumulator + currentValue.price,
+        0,
+      ),
+    )
 
   return {
     getBasket,
@@ -64,5 +71,6 @@ export const useBasketStore = defineStore('basket', () => {
     addToBasket,
     getIsBasketPopupVisible,
     toggleBasketPopup,
+    getBasketTotal,
   }
 })
