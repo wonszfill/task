@@ -82,7 +82,7 @@ const { getCurrency } = useSettingsStore()
     h3 {
       font-weight: bold;
       font-size: 18px;
-      line-height: 30px;
+      line-height: 22px;
     }
 
     button {
