@@ -36,5 +36,5 @@ npm run build
 ### Test in production mode
 
 ```sh
-npm run build && npm run start
+npm run preview
 ```
