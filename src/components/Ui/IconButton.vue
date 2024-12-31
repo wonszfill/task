@@ -59,8 +59,8 @@ withDefaults(defineProps<Props>(), {
     position: absolute;
     width: 0.8125rem;
     height: 0.8125rem;
-    top: -2px;
-    right: -7px;
+    top: -0.125rem;
+    right: -0.4375rem;
     z-index: 1;
     border-radius: 1000px;
   }

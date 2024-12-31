@@ -109,7 +109,7 @@ defineEmits(['remove'])
     border-radius: 999px;
     background-color: $light-gray;
     flex-shrink: 0;
-    margin-right: 13px;
+    margin-right: 0.8125rem;
   }
 
   &__label {

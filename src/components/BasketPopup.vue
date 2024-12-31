@@ -83,13 +83,13 @@ const { getCurrency } = useSettingsStore()
 
     h3 {
       font-weight: bold;
-      font-size: 18px;
-      line-height: 22px;
+      font-size: 1.125rem;
+      line-height: 1.375rem;
     }
 
     button {
-      height: 41px;
-      width: 41px;
+      height: 2.5625rem;
+      width: 2.5625rem;
       border: none;
       display: flex;
       justify-content: center;
@@ -120,7 +120,7 @@ const { getCurrency } = useSettingsStore()
 
   &__summary {
     border-top: 1px solid $sirocco;
-    padding: 1.5625rem 1.6875rem 34px 1.5625rem;
+    padding: 1.5625rem 1.6875rem 2.125rem 1.5625rem;
     color: $text-color;
   }
 
@@ -170,7 +170,7 @@ const { getCurrency } = useSettingsStore()
 
   &__total-button {
     background-color: $secondary;
-    height: 50px;
+    height: 3.125rem;
     display: flex;
     align-items: center;
     justify-content: center;

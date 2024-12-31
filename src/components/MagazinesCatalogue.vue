@@ -46,7 +46,7 @@ const { getLocale, getCurrency } = useSettingsStore()
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 1.25rem;
-    margin-bottom: 37.05px;
+    margin-bottom: 2.3156rem;
   }
 }
 </style>
