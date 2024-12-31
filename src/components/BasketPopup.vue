@@ -59,7 +59,9 @@ const { getCurrency } = useSettingsStore()
       </div>
     </template>
 
-    <div class="basket-popup__empty" v-else>Koszyk jest pusty.</div>
+    <div class="basket-popup__empty" v-else>
+      Koszyk jest pusty. Żeby dodać do koszyka, kliknij na kartę produktu.
+    </div>
   </div>
 </template>
 

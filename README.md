@@ -38,3 +38,7 @@ npm run build
 ```sh
 npm run preview
 ```
+
+## Add to basket:
+
+To add product to basket just click on its card.
