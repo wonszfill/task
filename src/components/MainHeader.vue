@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import Logo from './Logo.vue'
+import Logo from './Ui/Logo.vue'
 import Navigation from './Navigation.vue'
 </script>
 
